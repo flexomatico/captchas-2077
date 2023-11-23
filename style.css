@@ -24,3 +24,16 @@ main {
 #company-logo {
     width: 200px;
 }
+
+/* Draw emotion captcha */
+
+#drawEmotionPrompt {
+    font-size: 24pt;
+    margin-top: 20%;
+}
+
+#drawEmotionCanvas {
+    aspect-ratio: 1 / 1 !important;
+}
+
+#drawEmotionSubmitButton {}
