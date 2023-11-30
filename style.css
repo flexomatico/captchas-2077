@@ -1,5 +1,5 @@
 /* ********* DON'T TOUCH THIS ********** */
-#content {
+#content, #defaultCanvas0{
     display: flex;
     flex-direction: column;
     aspect-ratio: 7 / 10;
