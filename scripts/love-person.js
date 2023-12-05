@@ -4,6 +4,7 @@ let detections = [];
 let video;
 let w = 640;
 let h = 480;
+let img;
 
 function setup() {
   let canvas = createCanvas(640, 480);
@@ -15,6 +16,8 @@ function setup() {
 
   const faceOptions = { withLandmarks: true, withExpressions: true, withDescriptors: false };
   faceapi = ml5.faceApi(video, faceOptions, faceReady);
+
+  img = document.getElementsByTagName("img");
 }
 
 // Start detecting faces
