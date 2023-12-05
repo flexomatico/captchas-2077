@@ -31,5 +31,5 @@ function takePhoto() {
 }
 
 function advancePage() {
-    window.location.href = "./templateCaptcha.html";
+    window.location.href = "./IDphoto_error.html";
 }
