@@ -4,11 +4,12 @@ let poseNet;
 let pose, skeleton;
 let evalJoints;
 let minConfidence = 0.5
+let isLiveView = true;
+let pUpdate;
 
 function setup(){
-  w = window.innerWidth * 0.7;
-  h = window.innerHeight * 0.7;
-  createCanvas(w, h);
+  let canvas = createCanvas(640, 480);
+  canvas.parent("camFeed");
   video = createCapture(VIDEO);
   video.size(w, h)
   video.hide();
@@ -17,9 +18,13 @@ function setup(){
   poseNet.on('pose', gotPoses, {flipHorizontal: false, minConfidence: minConfidence});
 
   angleMode(DEGREES);
+  pUpdate = document.getElementById("tPoseHumanness");
 }
 
 function draw(){
+  if (!isLiveView)
+    return;
+
   mirrorVideo();
 
   if (pose) {
@@ -97,6 +102,19 @@ function evaluateTPose() {
   let leftAngle = leftArmVec.angleBetween(leftBodyVec);
   let rightAngle = rightArmVec.angleBetween(rightBodyVec);
 
-  console.log('leftAngle: ' + leftAngle);
-  console.log('rightAngle: ' + rightAngle);
+  // console.log('leftAngle: ' + leftAngle);
+  // console.log('rightAngle: ' + rightAngle);
+  let leftHumanness = map(leftAngle, 0, 90, 0, 50);
+  let rightHumanness = map(rightAngle, 0, 90, 0, 50);
+  let humanness = abs(leftHumanness) + abs(rightHumanness);
+  // console.log('Humanness: ' + humanness);
+  pUpdate.innerText = "Humanness: " + humanness.toFixed(2) + "%";
+  if (humanness > 95)
+    isLiveView = false;
+    setTimeout(advancePage, 2000);
+}
+
+function advancePage(){
+  console.log("Hello")
+  window.location.href = "../templateCaptcha.html";
 }
