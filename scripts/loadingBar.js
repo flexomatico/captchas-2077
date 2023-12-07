@@ -15,7 +15,7 @@ let speed = loadingWidth / maxTime;
 }*/
 
 function setup() {
-    let canvas = createCanvas(300, 50);
+    let canvas = createCanvas(300, 100);
     canvas.parent("loadingBar");
     lastTick = millis();
     //console.log("GO FELIX");
@@ -34,8 +34,8 @@ function draw() {
         window.location.href = "./Step1_thankyou.html";
     }
     fill(0);
-    //textFont(font);
-    text(int((progress / loadingWidth)*100) + "%", posX + 140, posY + 50);
+    textFont('Audiowide');
+    text("Loading..." + int((progress / loadingWidth)*100) + "%", posX + 110, posY + 50);
     lastTick = millis();
     //console.log(millis());
 }
