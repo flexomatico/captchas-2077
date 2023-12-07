@@ -1,13 +1,24 @@
 let progress = 0;
-let loadingWidth = 100;
+let loadingWidth = 300;
 let loadingHeight = 20;
 let posX = 0;
 let posY = 0;
+let font;
+let lastTick;
+let maxTime = 5;
+let speed = loadingWidth / maxTime;
+
+/*function preload() {
+    //font = loadFont('./../Audiowide/Audiowide-Regular.ttf');
+    font = loadFont('./Audiowide-Regular.ttf');
+
+}*/
 
 function setup() {
-    let canvas = createCanvas(100, 50);
+    let canvas = createCanvas(300, 50);
     canvas.parent("loadingBar");
-    console.log("GO FELIX");
+    lastTick = millis();
+    //console.log("GO FELIX");
 }
 
 function draw() {
@@ -16,13 +27,16 @@ function draw() {
     rect(posX, posY, loadingWidth, loadingHeight);
     fill(0, 255, 0);
     rect(posX, posY, progress, loadingHeight);
-    progress++;
+    progress += speed*(millis()-lastTick)*0.001;
     if (progress > loadingWidth) {
         print("done");
         progress = loadingWidth;
         window.location.href = "./Step1_thankyou.html";
     }
     fill(0);
-    text(progress + "%", posX + 40, posY + 50);
-
+    //textFont(font);
+    text(int((progress / loadingWidth)*100) + "%", posX + 140, posY + 50);
+    lastTick = millis();
+    //console.log(millis());
 }
+
