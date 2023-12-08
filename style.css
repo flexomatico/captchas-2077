@@ -1,18 +1,20 @@
 /* ********* DON'T TOUCH THIS ********** */
-#content {
+#content{
     display: flex;
     flex-direction: column;
     aspect-ratio: 7 / 10;
     /* max-width: 80%; */
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    gap: 10px;
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-height: 100vh;
+    justify-content: center;
+    height: 100vh;
 }
 
 /* *************************************** */
@@ -26,8 +28,8 @@ main {
 }
 
 /* Draw emotion captcha */
-
-#drawEmotionPrompt {
+/* Draw Circle captcha */
+#circleTaskPrompt, #drawEmotionPrompt {
     font-size: 24pt;
     margin-top: 20%;
 }
@@ -37,3 +39,17 @@ main {
 }
 
 #drawEmotionSubmitButton {}
+
+#drawCircleCanvas {
+    aspect-ratio: 1 / 1 !important;
+}
+
+#drawCircleSubmitButton {}
+
+#lovePerson {
+    width: 640px;  
+}
+
+#loveTitle {
+    font-size:xx-large;
+}
