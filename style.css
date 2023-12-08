@@ -1,5 +1,5 @@
 /* ********* DON'T TOUCH THIS ********** */
-#content {
+#content{
     display: flex;
     flex-direction: column;
     aspect-ratio: 10 / 10;
@@ -38,6 +38,8 @@
     flex-direction: column;
     align-items: center;
     /*max-height: 300px;*/
+    justify-content: center;
+    gap: 10px;
 }
 
 main {
@@ -48,6 +50,8 @@ main {
     justify-content: flex-end;
     max-height: 100vh;
     aspect-ratio: 10 /10; */
+    justify-content: center;
+    height: 100vh;
 }
 
 /* *************************************** */
@@ -104,4 +108,31 @@ html, body {
     margin: 0;
     font-family: Audiowide;
     font-size: 15px
+}
+
+/* Draw emotion captcha */
+/* Draw Circle captcha */
+#circleTaskPrompt, #drawEmotionPrompt {
+    font-size: 24pt;
+    margin-top: 20%;
+}
+
+#drawEmotionCanvas {
+    aspect-ratio: 1 / 1 !important;
+}
+
+#drawEmotionSubmitButton {}
+
+#drawCircleCanvas {
+    aspect-ratio: 1 / 1 !important;
+}
+
+#drawCircleSubmitButton {}
+
+#lovePerson {
+    width: 640px;  
+}
+
+#loveTitle {
+    font-size:xx-large;
 }
