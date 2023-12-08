@@ -27,18 +27,25 @@ main {
     width: 200px;
 }
 
-
+/* Draw emotion captcha */
 /* Draw Circle captcha */
-#circleTaskPrompt {
+#circleTaskPrompt, #drawEmotionPrompt {
     font-size: 24pt;
     margin-top: 20%;
 }
+
+#drawEmotionCanvas {
+    aspect-ratio: 1 / 1 !important;
+}
+
+#drawEmotionSubmitButton {}
 
 #drawCircleCanvas {
     aspect-ratio: 1 / 1 !important;
 }
 
 #drawCircleSubmitButton {}
+
 #lovePerson {
     width: 640px;  
 }
