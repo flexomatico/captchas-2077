@@ -27,6 +27,18 @@ main {
     width: 200px;
 }
 
+
+/* Draw Circle captcha */
+#circleTaskPrompt {
+    font-size: 24pt;
+    margin-top: 20%;
+}
+
+#drawCircleCanvas {
+    aspect-ratio: 1 / 1 !important;
+}
+
+#drawCircleSubmitButton {}
 #lovePerson {
     width: 640px;  
 }
