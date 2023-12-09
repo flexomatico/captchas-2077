@@ -1,5 +1,5 @@
 /* ********* DON'T TOUCH THIS ********** */
-#content{
+#content {
     display: flex;
     flex-direction: column;
     aspect-ratio: 10 / 10;
@@ -83,8 +83,7 @@ main {
     width: 40vh;
 }
 
-.loadingBar {
-}
+.loadingBar {}
 
 button {
     border: 1px solid #000;
@@ -102,7 +101,8 @@ button:hover {
     background: gray;
 }
 
-html, body {
+html,
+body {
     /*margin: 140px;*/
     height: 100%;
     margin: 0;
@@ -112,9 +112,12 @@ html, body {
 
 /* Draw emotion captcha */
 /* Draw Circle captcha */
-#circleTaskPrompt, #drawEmotionPrompt {
+#circleTaskPrompt,
+#drawEmotionPrompt,
+#thinkingPrompt {
     font-size: 24pt;
-    margin-top: 20%;
+    margin-top: 10vh;
+    margin-bottom: 30px;
 }
 
 #drawEmotionCanvas {
@@ -130,9 +133,43 @@ html, body {
 #drawCircleSubmitButton {}
 
 #lovePerson {
-    width: 640px;  
+    width: 640px;
 }
 
 #loveTitle {
-    font-size:xx-large;
+    font-size: xx-large;
+}
+
+#thinkingContainer {
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 1 / 1;
+    /* max-width: 80%; */
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 40%;
+
+}
+
+.imageRow {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.thinking-image {
+    aspect-ratio: 1 !important;
+    max-height: 100%;
+    max-width: 33%;
+    box-sizing: border-box;
+}
+
+.thinking-image:hover {
+    cursor: pointer;
+}
+
+.selected {
+    border-style: solid;
+    border-width: 5px;
+    border-color: green;
 }
