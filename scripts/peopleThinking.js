@@ -3,5 +3,5 @@ function toggleSelected(element) {
 }
 
 function advancePage() {
-    window.location.href = "../pages/s.html";
+    window.location.href = "../pages/love-person.html";
 }

@@ -13,35 +13,40 @@
 
 <body>
   <main>
-    <div id="content">
-      <div id="thinkingPrompt">Select the images with people thinking of dogs</div>
-      <div id="thinkingContainer">
-        <div class="imageRow">
-          <img id="img1" class="thinking-image" src="../images/people thinking/Image1.png"
-            onclick="toggleSelected(this)">
-          <img id="img2" class="thinking-image" src="../images/people thinking/Image2.png"
-            onclick="toggleSelected(this)">
-          <img id="img3" class="thinking-image" src="../images/people thinking/Image3.png"
-            onclick="toggleSelected(this)">
+    <div class="container">
+        <div class="container1">
+            <img src="../images/rotatingGif2.gif" alt="" id="company-logo_small">
+            <div id="thinkingContainer">
+                <div class="imageRow">
+                    <img id="img1" class="thinking-image" src="../images/people thinking/Image1.png"
+                         onclick="toggleSelected(this)">
+                    <img id="img2" class="thinking-image" src="../images/people thinking/Image2.png"
+                         onclick="toggleSelected(this)">
+                    <img id="img3" class="thinking-image" src="../images/people thinking/Image3.png"
+                         onclick="toggleSelected(this)">
+                </div>
+                <div class="imageRow">
+                    <img id="img4" class="thinking-image" src="../images/people thinking/Image4.png"
+                         onclick="toggleSelected(this)">
+                    <img id="img5" class="thinking-image" src="../images/people thinking/Image5.png"
+                         onclick="toggleSelected(this)">
+                    <img id="img6" class="thinking-image" src="../images/people thinking/Image6.png"
+                         onclick="toggleSelected(this)">
+                </div>
+                <div class="imageRow">
+                    <img id="img7" class="thinking-image" src="../images/people thinking/Image7.png"
+                         onclick="toggleSelected(this)">
+                    <img id="img8" class="thinking-image" src="../images/people thinking/Image8.png"
+                         onclick="toggleSelected(this)">
+                    <img id="img9" class="thinking-image" src="../images/people thinking/Image9.png"
+                         onclick="toggleSelected(this)">
+                </div>
+            </div>
+            <div class="text">Select the images with people thinking of dogs</div>
         </div>
-        <div class="imageRow">
-          <img id="img4" class="thinking-image" src="../images/people thinking/Image4.png"
-            onclick="toggleSelected(this)">
-          <img id="img5" class="thinking-image" src="../images/people thinking/Image5.png"
-            onclick="toggleSelected(this)">
-          <img id="img6" class="thinking-image" src="../images/people thinking/Image6.png"
-            onclick="toggleSelected(this)">
-        </div>
-        <div class="imageRow">
-          <img id="img7" class="thinking-image" src="../images/people thinking/Image7.png"
-            onclick="toggleSelected(this)">
-          <img id="img8" class="thinking-image" src="../images/people thinking/Image8.png"
-            onclick="toggleSelected(this)">
-          <img id="img9" class="thinking-image" src="../images/people thinking/Image9.png"
-            onclick="toggleSelected(this)">
-        </div>
-      </div>
-      <button id="verify-button" onclick="advancePage()">Verify selection</button>
+        <div class="container2">
+      <button onclick="advancePage()">Verify selection</button>
+            </div>
     </div>
   </main>
 </body>

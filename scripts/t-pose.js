@@ -116,5 +116,5 @@ function evaluateTPose() {
 
 function advancePage(){
   console.log("Hello")
-  window.location.href = "../pages/love-person.html";
+  window.location.href = "../pages/drawCircle.html";
 }

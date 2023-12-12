@@ -2,16 +2,19 @@
 let faceapi;
 let detections = [];
 let video;
-let w = 640;
-let h = 480;
+let w;// = windowWidth / 4;
+let h;// = windowWidth / 4;
 let img;
 
 function setup() {
-  let canvas = createCanvas(640, 480);
-  let content = document.getElementById("content");
-  canvas.parent("content");
+  //let canvas = createCanvas(w, h);
+  w = windowWidth / 3;
+  h = windowWidth / 3;
+  let canvas = createCanvas(w, h, document.getElementById('lovePersonCanvas'));
+  //let content = document.getElementById("content");
+  //canvas.parent("content");
   video = createCapture(VIDEO);
-  video.size(640, 480);
+  video.size(w, h);
   video.hide();
 
   const faceOptions = { withLandmarks: true, withExpressions: true, withDescriptors: false };
