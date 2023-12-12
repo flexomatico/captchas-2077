@@ -11,7 +11,7 @@ function setup() {
   //let canvas = createCanvas(w, h);
   w = windowWidth / 3;
   h = windowWidth / 3;
-  let canvas = createCanvas(w, h, document.getElementById('lovePersonCanvas'));
+  let canvas = createCanvas(w, h, document.getElementById('webcamCanvas'));
   //let content = document.getElementById("content");
   //canvas.parent("content");
   video = createCapture(VIDEO);
@@ -47,7 +47,7 @@ function draw() {
 
 function checkStartTimer(){
   if (!timerStarted && detections.length > 0) {
-    setTimeout(endTimer, 15000);
+    //setTimeout(endTimer, 15000);
     timerStarted = true;
   }
 }
