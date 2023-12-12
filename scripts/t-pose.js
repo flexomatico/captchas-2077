@@ -13,6 +13,7 @@ function setup(){
   canvas.parent("camFeed");
   canvas.id("webcamCanvas");
   video = createCapture(VIDEO, onWebcamReady);
+  video.size(640, 480);
   video.hide();
 
   poseNet = ml5.poseNet(video, modelLoaded);
