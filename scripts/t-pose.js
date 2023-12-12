@@ -117,7 +117,7 @@ function evaluateTPose() {
   pUpdate.innerText = "Humanness: " + humanness.toFixed(2) + "%";
   if (humanness > 95)
     isLiveView = false;
-    setTimeout(advancePage, 2000);
+    setTimeout(advancePage, 5000);
 }
 
 function advancePage(){
