@@ -135,8 +135,8 @@ body {
 }
 
 #lovePersonCanvas {
-    width: calc((100vw / 30) * 9) !important;
-    height: calc((100vw / 30) * 16) !important;
+    width: calc((100vw / 20) * 7) !important;
+    height: calc((100vw / 20) * 10) !important;
 }
 
 #loveTitle {
