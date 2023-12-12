@@ -6,11 +6,12 @@ let evalJoints;
 let minConfidence = 0.5
 let isLiveView = true;
 let pUpdate;
+let webcamReady = false;
 
 function setup(){
   let canvas = createCanvas(640, 480);
   canvas.parent("camFeed");
-  video = createCapture(VIDEO);
+  video = createCapture(VIDEO, onWebcamReady);
   video.size(w, h)
   video.hide();
 
@@ -21,12 +22,17 @@ function setup(){
   pUpdate = document.getElementById("tPoseHumanness");
 }
 
+function onWebcamReady() {
+  webcamReady = true;
+}
+
 function draw(){
   if (!isLiveView)
     return;
 
-  mirrorVideo();
-
+  if (webcamReady)
+    mirrorVideo();
+  
   if (pose) {
     drawSkeleton();
     evaluateTPose();
