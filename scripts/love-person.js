@@ -5,6 +5,7 @@ let video;
 let w;// = windowWidth / 4;
 let h;// = windowWidth / 4;
 let img;
+let timerStarted = false;
 
 function setup() {
   //let canvas = createCanvas(w, h);
@@ -41,7 +42,18 @@ function gotFaces(error, result) {
 function draw() {
   mirrorVideo();
   drawLandmarks();
+  checkStartTimer();
+}
 
+function checkStartTimer(){
+  if (!timerStarted && detections.length > 0) {
+    setTimeout(endTimer, 15000);
+    timerStarted = true;
+  }
+}
+
+function endTimer() {
+  window.location.href = "../pages/result.html";
 }
 
 function mirrorVideo() {
