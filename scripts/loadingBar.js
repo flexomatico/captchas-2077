@@ -35,7 +35,9 @@ function draw() {
     }
     fill(0);
     textFont('Audiowide');
-    text("Loading..." + int((progress / loadingWidth)*100) + "%", posX + 110, posY + 50);
+    textSize(25)
+    textAlign(CENTER);
+    text("Loading..." + int((progress / loadingWidth)*100) + "%", 150, posY + 50);
     lastTick = millis();
     //console.log(millis());
 }

@@ -1,10 +1,10 @@
 let canvas;
 
 function setup() {
-    canvas = createCanvas(windowWidth / 4, windowWidth / 4, document.getElementById('drawCircleCanvas'));
+    canvas = createCanvas(windowWidth / 2, windowWidth / 2, document.getElementById('drawCircleCanvas'));
     background(240);
     stroke('orange');
-    strokeWeight(2);
+    strokeWeight(4);
 }
 
 

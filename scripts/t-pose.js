@@ -11,6 +11,7 @@ let webcamReady = false;
 function setup(){
   let canvas = createCanvas(640, 480);
   canvas.parent("camFeed");
+  canvas.id("webcamCanvas");
   video = createCapture(VIDEO, onWebcamReady);
   video.size(w, h)
   video.hide();
@@ -121,6 +122,5 @@ function evaluateTPose() {
 }
 
 function advancePage(){
-  console.log("Hello")
   window.location.href = "../pages/drawCircle.html";
 }

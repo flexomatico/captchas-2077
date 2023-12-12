@@ -5,6 +5,7 @@ let isLiveView = true;
 
 function setup() {
   let canvas = createCanvas(640, 480);
+  canvas.id("webcamCanvas");
   canvas.parent("camera");
   video = createCapture(VIDEO);
   video.size(640, 480);

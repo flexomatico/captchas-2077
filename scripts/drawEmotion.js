@@ -1,10 +1,10 @@
 let canvas;
 
 function setup() {
-    canvas = createCanvas(windowWidth / 4, windowWidth / 4, document.getElementById('drawEmotionCanvas'));
+    canvas = createCanvas(windowWidth / 2, windowWidth / 2, document.getElementById('drawEmotionCanvas'));
     background(240);
     stroke('orange');
-    strokeWeight(2);
+    strokeWeight(4);
 }
 
 function draw() {

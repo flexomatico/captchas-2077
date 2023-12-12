@@ -60,10 +60,12 @@ main {
 
 /* *************************************** */
 
-#company-title {
+#start-screen-title {
     font-size: 30pt;
-    font-family: Audiowide;
-    /*justify-self: center;*/
+}
+
+#company-title {
+    font-size: 100px;
 }
 
 #company-logo {
@@ -85,6 +87,7 @@ main {
 .text {
     text-align: center;
     width: 40vh;
+    font-size: 25px;
 }
 
 .loadingBar {}
@@ -98,7 +101,7 @@ button {
     flex-shrink: 0;
     padding: 20px 25px;
     font-family: Audiowide;
-    font-size: 15px;
+    font-size: 25px;
 }
 
 button:hover {
@@ -134,7 +137,7 @@ body {
     height: calc(100vw / 2);
 }
 
-#lovePersonCanvas {
+#webcamCanvas {
     width: calc((100vw / 20) * 7) !important;
     height: calc((100vw / 20) * 10) !important;
 }
@@ -150,7 +153,7 @@ body {
     /* max-width: 80%; */
     justify-content: flex-start;
     align-items: center;
-    max-width: 40%;
+    max-width: 70%;
 
 }
 
