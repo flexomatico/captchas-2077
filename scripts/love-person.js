@@ -47,7 +47,7 @@ function draw() {
 
 function checkStartTimer(){
   if (!timerStarted && detections.length > 0) {
-    //setTimeout(endTimer, 15000);
+    setTimeout(endTimer, 15000);
     timerStarted = true;
   }
 }
