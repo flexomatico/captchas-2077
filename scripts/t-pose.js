@@ -25,9 +25,9 @@ function draw(){
   if (!isLiveView)
     return;
 
-  mirrorVideo();
-
+  
   if (pose) {
+    mirrorVideo();
     drawSkeleton();
     evaluateTPose();
   }
