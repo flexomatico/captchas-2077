@@ -4,7 +4,7 @@
 #content {
     
     display: flex;
-    flex:1;
+    /* flex:1; */
     flex-direction: column;
     /*aspect-ratio: 10 / 10;*/
     /*max-width: 80%;*/
@@ -111,17 +111,8 @@ body {
     height: 100%;
     margin: 0;
     font-family: Audiowide;
-    font-size: 15px
-}
-
-/* Draw emotion captcha */
-/* Draw Circle captcha */
-#circleTaskPrompt,
-#drawEmotionPrompt,
-#thinkingPrompt {
-    font-size: 24pt;
-    margin-top: 10vh;
-    margin-bottom: 30px;
+    font-size: 15px;
+    overflow: hidden;
 }
 
 #drawEmotionCanvas {
@@ -144,8 +135,8 @@ body {
 }
 
 #lovePersonCanvas {
-    width: calc(100vw / 3) !important;
-    height: calc(100vw / 3) !important;
+    width: calc((100vw / 30) * 9) !important;
+    height: calc((100vw / 30) * 16) !important;
 }
 
 #loveTitle {
